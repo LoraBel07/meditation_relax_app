@@ -1,0 +1,128 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url(rainb3.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background: url(rain.jpg);
+    background-size: cover;
+    background-position: top;
+    box-shadow: inset  0 -15px 30px -15px rgb(34, 34, 34), 0 0 20px 20px rgba(12, 11, 11, 0.842);
+    animation: color 3s linear infinite;
+}
+@keyframes color {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
+section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(raindrop.png);
+    animation: rain 0.3s linear infinite;
+}
+@keyframes rain {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 20% 100%;
+    }
+}
+
+#container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0;
+    width: 1;
+    height: 70px;
+}
+#box {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+#myProgress, #myProgressTen {
+    width: 80%;
+    background-color: rgba(221, 221, 221, 0);
+    border-radius: 10%;
+    border: 1px solid #b4f7ea;
+}
+#myBar, #myBarTen {
+    width: 1%;
+    height: 15px;
+    background-color: #b4f7ea;
+    border-radius: 10%;    
+}
+button {
+    background-color: #b4f7ea;
+    border-radius: 20px;
+    padding: 5px;
+    border: none;
+    font-family: 'Jura', sans-serif;
+    font-weight: bolder;
+    color:gray;
+}
+button:hover {
+    background: linear-gradient(to right, #f804f8, rgb(5, 153, 252));
+    box-shadow: rgba(197, 195, 195, 0.548) 5px 8px;
+}
+
+
+/* - - - - - - - - - - - - - - - -  */
+@media all and (max-width: 800px) {
+    #container {
+        height: 70px;
+    }
+}
+
+/* Surface Duo (540) */
+@media all and (max-width: 550px) {
+    #myProgress, #myProgressTen {
+        width: 60%;
+    }
+}
+
+/* iPhone 6/7/8 Plus (414),
+Pixel 2 XL (411 ???), Pixel 2 (411)*/
+@media all and (max-width: 420px) {
+    section {        
+        background-position: left;
+    }
+}
+
+/* iPhone X (375), iPhone 6/7/8 (375 ???) */
+@media all and (max-width: 380px) {
+    section {        
+        background-position: top;
+    }
+}
+/* Galaxy S5 (360),
+Moto G4 (360)*/
+@media all and (max-width: 370px) {
+    section {        
+        background-position: top;
+    }
+}
+
+/* iPhone 5/SE */
+@media all and (max-width: 320px) {    
+    #myProgress, #myProgressTen {
+        width: 50%;
+    }
+}
