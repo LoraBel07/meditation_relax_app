@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jura', sans-serif;
+}
+
+body {
+    background-image: url(wall.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    background-color: #24171e;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transform-style: preserve-3d;
+}
+.angel {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 440px;
+    height: 380px;
+    background: url(girl.png);
+    background-size: cover;
+    background-repeat: repeat-x;
+    /* border-radius: 50%; */
+    /* box-shadow: inset 0 0 30px rgba(0, 0, 0, 1), 0 0 60px #4a2d64; */
+}
+.circle {
+    transform-style: preserve-3d;
+    animation: animatePic 40s linear infinite;
+}
+span {
+    width: 90px;
+    font-size: 100px;
+    font-family: 'Jura', sans-serif;
+    font-weight: bolder;
+    color: #bbcbff;
+    text-shadow: #e0c1bc59 4px 6px;
+}
+.circle span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0);
+    transform-origin: center;
+    transform-style: preserve-3d;
+    padding: 2px 5px;
+    transform: rotateY(calc(var(--i) * calc(360deg / 20))) translateZ(350px);
+
+}
+
+@keyframes animatePic {
+    0% {
+        transform: perspective(1000px) rotateY(360deg) rotateX(15deg) translateY(-40px);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(0deg) rotateX(15deg) translateY(-40px);
+    }
+}
+
+
+/* #header {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(214, 250, 241, 0);
+    
+} */
+h1 {
+    font-size: 60px;
+    font-weight: bolder;   
+    font-family: 'Jura', sans-serif;
+    color:rgb(181, 247, 230);
+    text-shadow: rgba(141, 140, 140, 0.281) 4px 6px;
+}
+h2 {
+    font-size: 40px;
+    font-weight: bolder;   
+    font-family: 'Jura', sans-serif;
+    color: #fff;
+    text-shadow: rgba(36, 35, 35, 0.281) 4px 6px;
+}
+/* #partOne, #partTwo, #partThree {
+    background-color: rgba(75, 77, 76, 0.39);
+    font-family: 'Jura', sans-serif;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+} */
+
+#btn-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#btn {
+    margin-top: 10px;
+    background-color: rgba(214, 250, 241, 0.089);    
+    border-radius: 10px;
+    border: #bbcbff 1px solid;
+    padding: 10px;
+}
+#btn:hover {
+    background: linear-gradient(to right, #bbcbff, #e0c1bc59);
+    box-shadow: rgba(197, 195, 195, 0.39) 5px 8px;
+    }
+a {
+    text-decoration: none;
+    font-family: 'Jura', sans-serif;
+    font-size: 25px;
+    color:white;    
+}
+
+/* - - - - - - - - - - - - - - - -  */
+@media all and (max-width: 800px) {
+    .angel {
+        width: 400px;
+        height: 370px;
+        height: intrinsic;  
+    }
+    
+    .circle span {
+        transform: rotateY(calc(var(--i) * calc(360deg / 20))) translateZ(260px);    
+    }
+}
+
+/* Surface Duo (540) */
+@media all and (max-width: 550px) {
+    .angel {
+        width: 330px;
+        height: 300px;
+        height: intrinsic;  
+    }
+    span {
+        width: 70px;
+        font-size: 70px;
+    }
+    
+    .circle span {
+        transform: rotateY(calc(var(--i) * calc(360deg / 20))) translateZ(210px);    
+    }
+}
+
+/* iPhone 6/7/8 Plus (414),
+Pixel 2 XL (411 ???), Pixel 2 (411)*/
+@media all and (max-width: 420px) {
+    .angel {        
+        width: 210px;
+        height: 180px;
+        height: intrinsic;  
+    }
+    span {
+        width: 50px;
+        font-size: 50px;
+    }
+    a {
+        font-size: 17px;
+    }
+    .circle span {
+        transform: rotateY(calc(var(--i) * calc(360deg / 20))) translateZ(140px);    
+    }
+}
+
+/* iPhone X (375), iPhone 6/7/8 (375 ???) */
+@media all and (max-width: 380px) {
+    .angel {        
+        width: 190px;
+        height: 160px;
+        height: intrinsic;  
+    }
+    span {
+        width: 50px;
+        font-size: 50px;
+    }
+    a {
+        font-size: 15px;
+    }
+    .circle span {
+        transform: rotateY(calc(var(--i) * calc(360deg / 20))) translateZ(130px);    
+    }
+}
+/* Galaxy S5 (360),
+Moto G4 (360)*/
+@media all and (max-width: 370px) {
+    h2, h5 {
+        font-size: 20px;
+    }
+    span {
+        width: 50px;
+        font-size: 45px;
+    }
+    a {
+        font-size: 15px;
+    }
+
+}
+
+/* iPhone 5/SE */
+@media all and (max-width: 320px) {
+    
+    .angel {
+        height: intrinsic; 
+    }
+}
