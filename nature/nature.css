@@ -1,0 +1,170 @@
+body {
+    background-image: url(nature.jpg);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    background-color: #bad1fb;
+}
+
+#petals {position:relative;top:-150px;width:100%;  text-align: right;}
+
+#petals i {
+    display: inline-block;
+    width: 30%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 58% 20% 70%;
+    -webkit-animation: falling 10s 0s infinite ;
+    opacity: 0;
+}
+
+#petals i:nth-of-type(2n) { -webkit-animation: falling2 6s 0s infinite; }
+#petals i:nth-of-type(3n) { -webkit-animation: falling3 12s 0s infinite; }
+
+#petals i:nth-of-type(n)    { width: 21px; height: 20px; }
+#petals i:nth-of-type(2n+1)    { height:17px; width:19px; }
+
+#petals i:nth-of-type(3n+2)  { height:14px; width:11px; }
+
+
+#petals i:nth-of-type(n)   { -webkit-animation-delay: 1.9s;}
+#petals i:nth-of-type(2n)  { -webkit-animation-delay: 3.9s;}
+#petals i:nth-of-type(3n)  { -webkit-animation-delay: 2.3s;}
+#petals i:nth-of-type(4n)  { -webkit-animation-delay: 4.4s;}
+#petals i:nth-of-type(5n)  { -webkit-animation-delay: 5s;  }
+#petals i:nth-of-type(6n)  { -webkit-animation-delay: 3.5s;}
+#petals i:nth-of-type(7n)  { -webkit-animation-delay: 2.8s;}
+#petals i:nth-of-type(8n)  { -webkit-animation-delay: 1.5s;}
+#petals i:nth-of-type(9n)  { -webkit-animation-delay: 3.3s;}
+#petals i:nth-of-type(10n) { -webkit-animation-delay: 2.5s;}
+#petals i:nth-of-type(11n) { -webkit-animation-delay: 1.2s;}
+#petals i:nth-of-type(12n) { -webkit-animation-delay: 4.1s;}
+#petals i:nth-of-type(13n) { -webkit-animation-delay: 1s;  }
+#petals i:nth-of-type(14n) { -webkit-animation-delay: 4.7s;}
+#petals i:nth-of-type(15n) { -webkit-animation-delay: 3s;  }
+
+#petals i:nth-of-type(n)    { background: url("flower-small.png") no-repeat;}
+#petals i:nth-of-type(n)    {transform:rotate(120deg);}
+#petals i:nth-of-type(n) { -webkit-animation-timing-function:ease-in-out;}
+
+
+@-webkit-keyframes falling {
+    0% {
+        -webkit-transform:
+            translate3d(300px,0,0)
+            rotate(0deg);
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform:
+            translate3d(550px,700px,0)
+            rotate(-60deg);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes falling3 {
+    0% {
+        -webkit-transform:
+            translate3d(0,0,0)
+            rotate(0deg);
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform:
+            translate3d(-530px,1500px,0)
+            rotate(90deg);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes falling2 {
+     0% {
+        -webkit-transform:
+            translate3d(0,0,0)
+            rotate(150deg);
+    }
+    20% {
+        opacity: 1;
+  }
+    100% {
+        -webkit-transform:
+            translate3d(-400px,680px,0)
+            rotate(0deg);
+        opacity: 0;
+    }
+}
+
+
+#container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0;
+    width: 1;
+    height: 70px;
+}
+#box {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-evenly;
+    align-items: center;
+    width: 50%;
+}
+#myProgress, #myProgressTen {
+    width: 80%;
+    background-color: rgba(221, 221, 221, 0);
+    border-radius: 10%;
+    border: 1px solid #88aff7;
+}
+#myBar, #myBarTen {
+    width: 1%;
+    height: 15px;
+    background-color: #88aff7;
+    border-radius: 10%;    
+}
+button {
+    background-color: #88aff7;
+    border-radius: 20px;
+    padding: 5px;
+    border: none;
+    font-family: 'Jura', sans-serif;
+    font-weight: bolder;
+    color: white;
+}
+button:hover {
+    background: linear-gradient(to right, #f59ef5, rgb(115, 248, 137));
+    box-shadow: rgba(197, 195, 195, 0.548) 5px 8px;
+}
+
+
+/* Surface Duo (540) */
+@media all and (max-width: 550px) {
+    #myProgress, #myProgressTen {
+        width: 70%;
+    }
+}
+
+/* iPhone 6/7/8 Plus (414),
+Pixel 2 XL (411 ???), Pixel 2 (411)*/
+@media all and (max-width: 420px) {
+    #myProgress, #myProgressTen {
+        width: 60%;
+    }
+    
+}
+
+
+/* iPhone X (375), iPhone 6/7/8 (375 ???) */
+@media all and (max-width: 380px) {
+    #myProgress, #myProgressTen {
+        width: 50%;
+    }
+}
+
+
+
