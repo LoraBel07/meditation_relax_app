@@ -1,0 +1,76 @@
+body {
+    
+    background-image: url(night.jpg);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-color: #164b55;
+}
+
+#canvas{
+    width: 100%;
+    height: 90vh;
+}
+
+#container {
+    display: flex;
+    justify-content: space-evenly;   
+    
+}
+#box {
+    display: flex; 
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 1%;
+    width: 50%;
+}
+#myProgress, #myProgressTen {
+    width: 80%;
+    background-color: rgba(221, 221, 221, 0);
+    border-radius: 10%;
+    border: 1px solid #b4f7ea;
+}
+#myBar, #myBarTen {
+    width: 1%;
+    height: 15px;
+    background-color: #b4f7ea;
+    border-radius: 10%;    
+}
+button {
+    background-color: #b4f7ea;
+    border-radius: 20px;
+    padding: 5px;
+    border: none;
+    font-family: 'Jura', sans-serif;
+    font-weight: bolder;
+    color:gray;
+}
+button:hover {
+    background: linear-gradient(to right, #cfd0d1, white, #b4f7ea);
+    box-shadow: rgba(197, 195, 195, 0.548) 5px 8px;
+}
+
+/* Surface Duo (540) */
+@media all and (max-width: 550px) {
+    #myProgress, #myProgressTen {
+        width: 70%;
+    }
+}
+
+/* iPhone 6/7/8 Plus (414),
+Pixel 2 XL (411 ???), Pixel 2 (411)*/
+@media all and (max-width: 420px) {
+    #myProgress, #myProgressTen {
+        width: 60%;
+    }
+    
+}
+
+
+/* iPhone X (375), iPhone 6/7/8 (375 ???) */
+@media all and (max-width: 380px) {
+    #myProgress, #myProgressTen {
+        width: 50%;
+    }
+}
