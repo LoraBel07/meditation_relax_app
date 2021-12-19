@@ -7,3 +7,6 @@ And you can make a choice of the sounds that are most pleasant for you: rain ðŸŒ
 
 On my LinkedIn page you can see a short video demonstrating first part of my app:
 https://www.linkedin.com/feed/update/urn:li:activity:6862412554061303808/
+
+Wath my app here: 
+https://meditation-relax.glitch.me/
