@@ -1,2 +1,2 @@
-
+This is my application with images and sounds for meditation and relaxation. This app also contains a choice to set the countdown to 5 and 10 minutes.
 ![meditation_first](https://user-images.githubusercontent.com/91973134/146684033-f71cc629-becb-4fd4-8c02-3e931a4b98c6.jpg)
