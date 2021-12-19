@@ -5,4 +5,5 @@ And you can make a choice of the sounds that are most pleasant for you: rain ðŸŒ
 ![meditation_first](https://user-images.githubusercontent.com/91973134/146684033-f71cc629-becb-4fd4-8c02-3e931a4b98c6.jpg)
 
 
-https://www.linkedin.com/posts/larisa-b-34558714a_mywork-juniordeveloper-frontenddevelopment-activity-6859542270580989952-Mt8r
+Here you can see a short video demonstrating first part of my app:
+https://www.linkedin.com/feed/update/urn:li:activity:6862412554061303808/
